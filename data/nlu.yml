@@ -1,0 +1,35 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - oi
+    - olá
+    - boa noite
+   
+- intent: fazer_pedido
+  examples: |
+    - Quero pedir uma pizza
+    - Quero uma pizza de [calabresa](sabor)
+    - Quero uma pizza [grande](tamanho) de [mussarela](sabor)
+    - Gostara de pedir uma pizza [média](tamanho) 
+    - Gostaria de pedir esse combo
+
+- intent: consultar_preco 
+  examples: |
+    - Qual o valor da pizza [media](tamanho)?
+    - Quanto custa a pizza de [calabresa](tamanho)?
+    - Qual é o preço da pizza?
+    - Quero saber o valor da pizza de [chocolate](sabor) [pequena](tamanho)?
+
+- intent: consultar_entrega
+  examples: |
+    - Voces entregam no [Centro](bairro)?
+    - Fazem entrega no bairro [rio vermelho](bairro)?
+    - Qual a taxa de entrega?
+
+- intent: consultar_horario
+  examples: |
+    - Qual é o horário de funcionamento?
+    - Está atendendo ainda? 
+    - Que horas voces começam a atender?
