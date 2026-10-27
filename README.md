@@ -1,21 +1,23 @@
-# Chatbot de Pizzaria com Rasa NLU
+# Estudos de NLP com Rasa
 
-Projeto acadêmico para estudar Processamento de Linguagem Natural (NLP) e criar um chatbot de atendimento para uma pizzaria usando o framework Rasa.
+Projeto acadêmico para estudar Processamento de Linguagem Natural (NLP) e desenvolver chatbots usando o framework Rasa.
 
-## O que o chatbot aprende
+O exemplo de pizzaria utilizado neste repositório é apenas um exercício inicial para compreender os conceitos de intenção, entidade, treinamento e regras de conversa. O projeto poderá ser adaptado posteriormente para outros contextos, como atendimento público, serviços institucionais ou educação.
 
-O arquivo `data/nlu.yml` contém exemplos de mensagens para o Rasa identificar:
+## Conceitos estudados
 
-- `fazer_pedido`: cliente quer pedir uma pizza;
-- `consultar_preco`: cliente quer saber um preço;
-- `consultar_entrega`: cliente pergunta sobre entrega;
-- `consultar_horario`: cliente pergunta o horário de funcionamento.
+O arquivo `data/nlu.yml` contém exemplos de mensagens para o Rasa identificar intenções, ou seja, o objetivo do usuário na conversa:
 
-O projeto também utiliza entidades, que são informações específicas extraídas da mensagem:
+- `fazer_pedido`: exemplo de uma solicitação do usuário;
+- `consultar_preco`: exemplo de uma consulta;
+- `consultar_entrega`: exemplo de uma dúvida sobre serviço;
+- `consultar_horario`: exemplo de uma consulta de informação.
 
-- `sabor`: calabresa, mussarela, chocolate;
-- `tamanho`: pequena, média, grande;
-- `bairro`: local de entrega.
+O projeto também utiliza entidades, que são informações específicas extraídas da mensagem. No exemplo atual:
+
+- `sabor`: informação sobre o sabor escolhido;
+- `tamanho`: informação sobre o tamanho escolhido;
+- `bairro`: informação sobre o local de entrega.
 
 ## Estrutura principal
 
@@ -80,7 +82,8 @@ Vocês entregam no Centro?
 Qual é o horário de funcionamento?
 ```
 
+Essas frases pertencem ao cenário didático da pizzaria. Elas podem ser substituídas por frases de qualquer outro domínio estudado.
+
 ## Observação
 
 A pasta `.venv` contém a instalação local do Python e não deve ser enviada ao GitHub. O arquivo `.gitignore` já impede que ela seja adicionada ao repositório.
-
