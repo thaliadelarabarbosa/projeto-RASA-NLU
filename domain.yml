@@ -8,28 +8,20 @@ entities:
   - sabor
   - quantidade
 
-
-slots:
-  sabor:
+slots: 
+  itens_pedido:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: sabor
+      - type: custom
 
-  quantidade:
-    type: text
-    influence_conversation: false
-    mappings:
-      - type: from_entity
-        entity: quantidade      
+actions: 
+  - action_processar_pedido   
 
 responses:
-  utter_confirmar_pedido:
-   - text: "Entendi: {quantidade} pizza(s) de {sabor}."
   utter_fora_do_escopo:
    - text: "Desculpe, posso ajudar apenas com pedidos de pizza."
 
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false

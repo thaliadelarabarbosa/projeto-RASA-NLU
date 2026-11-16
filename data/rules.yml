@@ -1,12 +1,13 @@
+
 version: "3.1"
 
 rules:
-
-  - rule: Confirmar pedido
+  - rule: Processar pedido de pizza
     steps:
       - intent: fazer_pedido
-      - action: utter_confirmar_pedido
-  - rule:   Fora do escopo
+      - action: action_processar_pedido
+
+  - rule: Responder fora do escopo
     steps:
       - intent: fora_do_escopo
       - action: utter_fora_do_escopo
