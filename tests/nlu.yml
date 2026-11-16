@@ -1,0 +1,23 @@
+version: "3.1"
+
+nlu:
+- intent: fazer_pedido
+  examples: |
+  - Quero uma pizza de [calabresa](sabor)
+  - Quero uma pizza de [mussarela](sabor)
+  - Quero uma pizza de [margherita](sabor)
+  - Quero uma pizza de [portuguesa](sabor)
+  - Quero uma pizza de [frango com catupiry](sabor)
+  - Quero uma pizza de [quatro queijos](sabor)
+  - Quero uma pizza de [pepperoni](sabor)
+  - Quero uma pizza de [carne seca](sabor)
+  - Quero uma pizza de [napolitana](sabor)
+  - Quero uma pizza de [vegetariana](sabor)
+  - Quero [duas](quantidade) pizzas de [calabresa](sabor)
+  - Quero [3](quantidade) pizzas de [mussarela](sabor)
+  - Pode preparar [quatro](quantidade) pizzas de [margherita](sabor)
+  - Gostaria de [5](quantidade) pizzas de [portuguesa](sabor)
+  - Quero [uma](quantidade) pizza de [frango com catupiry](sabor)
+  - Pode fazer [duas](quantidade) pizzas de [quatro queijos](sabor)
+  - Quero [3](quantidade) pizzas, uma de [pepperoni](sabor) e duas de [carne seca](sabor)
+  - Gostaria de [duas](quantidade) pizzas, uma de [napolitana](sabor) e outra de [vegetariana](sabor)

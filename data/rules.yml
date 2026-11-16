@@ -2,12 +2,11 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: Confirmar pedido
+    steps:
+      - intent: fazer_pedido
+      - action: utter_confirmar_pedido
+  - rule:   Fora do escopo
+    steps:
+      - intent: fora_do_escopo
+      - action: utter_fora_do_escopo

@@ -1,23 +1,26 @@
-# Estudos de NLP com Rasa
+# Chatbot de Pizzaria com Rasa
 
-Projeto acadêmico para estudar Processamento de Linguagem Natural (NLP) e desenvolver chatbots usando o framework Rasa.
+Projeto acadêmico para estudar Processamento de Linguagem Natural (NLP) com um chatbot de pizzaria.
 
-O exemplo de pizzaria utilizado neste repositório é apenas um exercício inicial para compreender os conceitos de intenção, entidade, treinamento e regras de conversa. O projeto poderá ser adaptado posteriormente para outros contextos, como atendimento público, serviços institucionais ou educação.
+## Objetivos da atividade
 
-## Conceitos estudados
+O chatbot deve:
 
-O arquivo `data/nlu.yml` contém exemplos de mensagens para o Rasa identificar intenções, ou seja, o objetivo do usuário na conversa:
+1. Identificar a intenção `fazer_pedido`;
+2. reconhecer dez sabores de pizza;
+3. extrair a quantidade de pizzas;
+4. testar se o treinamento foi aprendido corretamente.
 
-- `fazer_pedido`: exemplo de uma solicitação do usuário;
-- `consultar_preco`: exemplo de uma consulta;
-- `consultar_entrega`: exemplo de uma dúvida sobre serviço;
-- `consultar_horario`: exemplo de uma consulta de informação.
+### Conceitos principais
 
-O projeto também utiliza entidades, que são informações específicas extraídas da mensagem. No exemplo atual:
+- **Intenção (`intent`)**: objetivo da mensagem, como `fazer_pedido`.
+- **Entidade (`entity`)**: informação extraída da mensagem, como `sabor` e
+  `quantidade`.
+- **Slot**: espaço em que o Rasa guarda uma entidade para usá-la na resposta.
 
-- `sabor`: informação sobre o sabor escolhido;
-- `tamanho`: informação sobre o tamanho escolhido;
-- `bairro`: informação sobre o local de entrega.
+Os dez sabores treinados são: calabresa, mussarela, margherita, portuguesa,
+frango com catupiry, quatro queijos, pepperoni, carne seca, napolitana e
+vegetariana.
 
 ## Estrutura principal
 
@@ -73,16 +76,39 @@ Para sair do chatbot, digite:
 /stop
 ```
 
-## Exemplos para testar
+## Testar o reconhecimento
 
-```text
-Quero pedir uma pizza de calabresa
-Quanto custa a pizza?
-Vocês entregam no Centro?
-Qual é o horário de funcionamento?
+Para validar os arquivos:
+
+```bash
+rasa data validate
 ```
 
-Essas frases pertencem ao cenário didático da pizzaria. Elas podem ser substituídas por frases de qualquer outro domínio estudado.
+Para treinar o modelo:
+
+```bash
+rasa train
+```
+
+Para testar o NLU:
+
+```bash
+rasa test nlu --nlu data/nlu.yml
+```
+
+Para testar exemplos separados do treinamento:
+
+```bash
+rasa test nlu --nlu tests/nlu.yml
+```
+
+Para conversar com o chatbot:
+
+```text
+Quero duas pizzas de calabresa
+Pode fazer 3 pizzas de quatro queijos
+Gostaria de uma pizza vegetariana
+```
 
 ## Observação
 

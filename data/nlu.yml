@@ -1,35 +1,56 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - oi
-    - olá
-    - boa noite
-   
-- intent: fazer_pedido
-  examples: |
-    - Quero pedir uma pizza
-    - Quero uma pizza de [calabresa](sabor)
-    - Quero uma pizza [grande](tamanho) de [mussarela](sabor)
-    - Gostara de pedir uma pizza [média](tamanho) 
-    - Gostaria de pedir esse combo
+  - intent: fazer_pedido
+    examples: |
+      - Quero fazer um pedido
+      - Gostaria de fazer um pedido
+      - Vou querer fazer um pedido de pizza
+      - Quero uma pizza de [calabresa](sabor)
+      - Gostaria de uma pizza de [frango](sabor)
+      - Pode me trazer uma pizza de [pepperoni](sabor)
+      - Pode preparar uma pizza de [marguerita](sabor)
+      - Vou querer uma pizza de [portuguesa](sabor)
+      - Quero uma pizza de [atum](sabor)
+      - Quero uma pizza de [mussarela](sabor)
+      - Quero uma pizza de [bacon](sabor)
+      - Quero uma pizza de [brócolis](sabor)
+      - Quero uma pizza de [frango com catupiry](sabor)
+      - Quero uma pizza de [quatro queijos](sabor)
+      - Quero [uma](quantidade) pizza de [calabresa](sabor)
+      - Quero [duas](quantidade) pizzas de [frango](sabor)
+      - Pode preparar [três](quantidade) pizzas de [mussarela](sabor)
+      - Pode mandar [quatro](quantidade) pizzas de [marguerita](sabor)
+      - Quero [cinco](quantidade) pizzas de [portuguesa](sabor)
+      - Gostaria de pedir [seis](quantidade) pizzas de [atum](sabor)
+      - Quero [sete](quantidade) pizzas de [pepperoni](sabor)
+      - Pode preparar [oito](quantidade) pizzas de [bacon](sabor)
+      - Quero [nove](quantidade) pizzas de [brócolis](sabor)
+      - Gostaria de pedir [dez](quantidade) pizzas de [frango com catupiry](sabor)
+      - Quero [1](quantidade) pizza de [calabresa](sabor)
+      - Quero [2](quantidade) pizzas de [mussarela](sabor)
+      - Quero [3](quantidade) pizzas de [pepperoni](sabor)
+      - Quero [4](quantidade) pizzas de [atum](sabor)
+      - Quero [5](quantidade) pizzas de [quatro queijos](sabor)
+      - Quero [6](quantidade) pizzas de [frango](sabor)
+      - Quero [7](quantidade) pizzas de [bacon](sabor)
+      - Quero [8](quantidade) pizzas de [marguerita](sabor)
+      - Quero [9](quantidade) pizzas de [portuguesa](sabor)
+      - Quero [10](quantidade) pizzas de [calabresa](sabor)
+      - Quero [uma](quantidade) pizza de [calabresa](sabor) e [uma](quantidade) de [marguerita](sabor)
+      - Quero [duas](quantidade) pizzas de [frango](sabor) e [três](quantidade) de [atum](sabor)
+      - Pode preparar [quatro](quantidade) pizzas de [bacon](sabor) e [duas](quantidade) de [pepperoni](sabor)
+      - Vou querer [duas](quantidade) de [frango com catupiry](sabor) e [quatro](quantidade) de [quatro queijos](sabor)
+      - Quero [quatro](quantidade) pizzas de [quatro queijos](sabor)
+      - Quero [quatro](quantidade) de [quatro queijos](sabor)
+      - Pode mandar [quatro](quantidade) pizzas de [quatro queijos](sabor) e [quatro](quantidade) de [atum](sabor)
+      - Quero [quatro](quantidade) de [bacon](sabor) e [quatro](quantidade) de [quatro queijos](sabor)
+      - Pode mandar [duas](quantidade) pizzas de [quatro queijos](sabor) e [quatro](quantidade) de [calabresa](sabor)
 
-- intent: consultar_preco 
-  examples: |
-    - Qual o valor da pizza [media](tamanho)?
-    - Quanto custa a pizza de [calabresa](tamanho)?
-    - Qual é o preço da pizza?
-    - Quero saber o valor da pizza de [chocolate](sabor) [pequena](tamanho)?
-
-- intent: consultar_entrega
-  examples: |
-    - Voces entregam no [Centro](bairro)?
-    - Fazem entrega no bairro [rio vermelho](bairro)?
-    - Qual a taxa de entrega?
-
-- intent: consultar_horario
-  examples: |
-    - Qual é o horário de funcionamento?
-    - Está atendendo ainda? 
-    - Que horas voces começam a atender?
+  - intent: fora_do_escopo
+    examples: |
+      - Qual é a previsão do tempo?
+      - Me conte uma piada
+      - Como está o trânsito?
+      - Quero comprar um celular
+      - Qual é a capital do Brasil?

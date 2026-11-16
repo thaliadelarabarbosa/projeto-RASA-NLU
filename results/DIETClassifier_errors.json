@@ -1,0 +1,187 @@
+[
+  {
+    "text": "Quero uma pizza de calabresa",
+    "entities": [
+      {
+        "start": 19,
+        "end": 28,
+        "value": "calabresa",
+        "entity": "sabor"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "quantidade",
+        "start": 6,
+        "end": 9,
+        "confidence_entity": 0.8433713316917419,
+        "value": "uma",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sabor",
+        "start": 19,
+        "end": 28,
+        "confidence_entity": 0.9998007416725159,
+        "value": "calabresa",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Vou querer duas de frango com catupiry e quatro de quatro queijos",
+    "entities": [
+      {
+        "start": 11,
+        "end": 15,
+        "value": "duas",
+        "entity": "quantidade"
+      },
+      {
+        "start": 19,
+        "end": 38,
+        "value": "frango com catupiry",
+        "entity": "sabor"
+      },
+      {
+        "start": 41,
+        "end": 47,
+        "value": "quatro",
+        "entity": "quantidade"
+      },
+      {
+        "start": 51,
+        "end": 65,
+        "value": "quatro queijos",
+        "entity": "sabor"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "quantidade",
+        "start": 11,
+        "end": 15,
+        "confidence_entity": 0.9991637468338013,
+        "value": "duas",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sabor",
+        "start": 19,
+        "end": 38,
+        "confidence_entity": 0.8672069311141968,
+        "value": "frango com catupiry",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sabor",
+        "start": 41,
+        "end": 47,
+        "confidence_entity": 0.5014408826828003,
+        "value": "quatro",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sabor",
+        "start": 51,
+        "end": 65,
+        "confidence_entity": 0.7323548197746277,
+        "value": "quatro queijos",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quero quatro de bacon e quatro de quatro queijos",
+    "entities": [
+      {
+        "start": 6,
+        "end": 12,
+        "value": "quatro",
+        "entity": "quantidade"
+      },
+      {
+        "start": 16,
+        "end": 21,
+        "value": "bacon",
+        "entity": "sabor"
+      },
+      {
+        "start": 24,
+        "end": 30,
+        "value": "quatro",
+        "entity": "quantidade"
+      },
+      {
+        "start": 34,
+        "end": 48,
+        "value": "quatro queijos",
+        "entity": "sabor"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "quantidade",
+        "start": 6,
+        "end": 12,
+        "confidence_entity": 0.907404899597168,
+        "value": "quatro",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sabor",
+        "start": 16,
+        "end": 21,
+        "confidence_entity": 0.9998559951782227,
+        "value": "bacon",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sabor",
+        "start": 24,
+        "end": 30,
+        "confidence_entity": 0.5817418694496155,
+        "value": "quatro",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sabor",
+        "start": 34,
+        "end": 48,
+        "confidence_entity": 0.7143190503120422,
+        "value": "quatro queijos",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]
